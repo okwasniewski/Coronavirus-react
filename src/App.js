@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import './stylesheets/main';
 import Header from './layouts/Header';
 import Main from './sites/Main';
 import Countries from './sites/Countries';
