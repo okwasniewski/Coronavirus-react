@@ -8,7 +8,7 @@ function Header(props) {
             <ul className="top__items">
                 <li className="top__item"> <NavLink to="/countries"> Countries </NavLink></li>
                 <li className="top__item"><NavLink to="/about"> About </NavLink> </li>
-                <li className="top__item"><NavLink to="/countries"> Authors </NavLink> </li>
+                <li className="top__item"><NavLink to="/authors"> Authors </NavLink> </li>
             </ul>
         </header>
     );
