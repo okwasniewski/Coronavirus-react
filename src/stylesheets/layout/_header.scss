@@ -1,3 +1,28 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.top {
+    background-color: #f6f6f6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    -webkit-box-shadow: 2px 7px 62px -32px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 7px 62px -32px rgba(0,0,0,0.75);
+    box-shadow: 2px 7px 62px -32px rgba(0,0,0,0.75);  
+    &__logo{
+        font-weight: 600;
+        color: black;
+        width: 40%;
+        padding: 25px;
+        font-size: 25px;
+    }
+    &__items {
+        padding: 7px;
+    }
+    &__item {
+        display: inline;
+        padding: 26px;
+        font-size: 18px;
+    }
+}
