@@ -1,0 +1,18 @@
+.stats{
+    display: flex;
+    justify-content: space-around;
+     height: 270px;
+    
+}
+@media(max-width:991px){
+    .stats{
+        height: 220px;
+    }
+}
+@media(max-width:767px){
+    .stats{
+        flex-direction: column;
+        height: 680px;
+        text-align: center;
+    }
+}

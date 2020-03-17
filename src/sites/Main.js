@@ -1,15 +1,18 @@
 import React from 'react';
+import Stats from '../layouts/Stats';
+import Graph from '../components/Graph';
+import Ranking from '../layouts/Ranking'
 
 
-class Main extends React.Component {
-    state = {}
-    render() {
-        return (
-            <div>
-                Main
-            </div>
-        );
-    }
+
+function Main(props) {
+    return (
+        <main className="main">
+            <Stats />
+            <Graph />
+            <Ranking />
+        </main>
+    );
 }
 
 export default Main;

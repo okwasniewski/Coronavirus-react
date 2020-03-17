@@ -4,6 +4,7 @@ import './fontello-118af5e6/css/fontello.css';
 import './stylesheets/main.scss';
 import CountryDetail from './sites/CountryDetail';
 import Footer from './layouts/Footer';
+
 import Header from './layouts/Header';
 import Main from './sites/Main';
 import Countries from './sites/Countries';
