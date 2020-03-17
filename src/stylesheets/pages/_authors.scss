@@ -1,0 +1,23 @@
+.authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     
+    &__box{
+        width: 40%;
+        margin: 55px;
+        padding: 45px;
+        border-radius: 25px;
+        -webkit-box-shadow: 3px 3px 41px -19px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 3px 41px -19px rgba(0,0,0,0.75);
+        box-shadow: 3px 3px 41px -19px rgba(0,0,0,0.75);
+    }
+    &__donate{
+        width: 100%;
+        background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        color: white;
+    }
+}
