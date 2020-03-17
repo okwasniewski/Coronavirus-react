@@ -1,0 +1,18 @@
+.countryDetail {
+    text-align: center;
+    &__photo {
+        width: 100%;
+    }
+    &_title{
+        font-size: 40px;
+    }
+    &__confirmed{
+        font-weight: 500;
+    }
+    &__recovered{
+        color: green;
+    }
+    &__deaths{
+        color: red;
+    }
+}

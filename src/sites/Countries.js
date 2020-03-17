@@ -1,14 +1,20 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 class Countries extends React.Component {
+
+    state = {
+        isLoaded: false,
+        data: {},
+        recovered: '',
+        cases: '',
+    }
     
 fetchingdata() {
     fetch('https://covid19.mathdro.id/api/confirmed')
     .then(res => res.json())
     .then(data => {
-        console.log(data[0].countryRegion)
         const { confirmed, recovered, deaths } = data;
         this.setState({
             isLoaded: true,
@@ -18,12 +24,8 @@ fetchingdata() {
         })
     })
 }
-    state = {
-        isLoaded: false,
-        data: {},
-        recovered: '',
-        cases: '',
-    }
+
+    
     render() {
         this.fetchingdata()
         if(this.state.isLoaded){
@@ -32,7 +34,7 @@ fetchingdata() {
                    {
                    this.state.data.map(item => {
                        return(<div className="">
-                       <h1>{item.countryRegion}</h1> 
+                       <Link to={`/countries/${item.countryRegion}`}><h1>{item.countryRegion}</h1> </Link>
                        <p>Confirmed: {item.confirmed}</p> 
                        <p>Deaths: {item.deaths}</p> 
                        <p>Recovered: {item.recovered}</p> 
