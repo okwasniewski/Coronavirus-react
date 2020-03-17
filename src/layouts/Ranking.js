@@ -3,6 +3,7 @@ import RankingField from '../components/RankingField';
 import RankingSelect from '../components/RankingSelect';
 import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/BeatLoader";
+import { Link } from 'react-router-dom';
 
 const override = css`
   display: block;
@@ -81,7 +82,7 @@ class Ranking extends React.Component {
     render() {
 
         const data = this.state.isLoaded ? this.state.topCountries.map(el => (
-            <RankingField class={this.state.sortBy} key={el.countryRegion} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} />
+           <Link to={`/countries/${el.countryRegion}`}> <RankingField class={this.state.sortBy} key={el.countryRegion} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} /> </Link>
         )) : <BeatLoader
                 size={15}
                 color={"#123abc"}
