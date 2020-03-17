@@ -20,15 +20,21 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/stats',
+  'layout/ranking';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/infofield',
+  'components/graph';
+  
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/main';
 
 // 7. Themes
 @import
