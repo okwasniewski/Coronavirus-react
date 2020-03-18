@@ -1,51 +1,70 @@
 import React from 'react';
+import SearchingInput from '../components/SearchingInput'
 import { Link } from 'react-router-dom';
 
 
 class Countries extends React.Component {
 
-    state = {
-        isLoaded: false,
-        data: {},
-        recovered: '',
-        cases: '',
-    }
-    
-fetchingdata() {
-    fetch('https://covid19.mathdro.id/api/confirmed')
-    .then(res => res.json())
-    .then(data => {
-        const { confirmed, recovered, deaths } = data;
-        this.setState({
-            isLoaded: true,
-            data: data,
-            recovered: recovered,
-            cases: confirmed
-        })
-    })
-}
 
-    
-    render() {
-        this.fetchingdata()
-        if(this.state.isLoaded){
-            return (
-                <div>
-                   {
-                   this.state.data.map(item => {
-                       return(<div className="">
-                       <Link to={`/countries/${item.countryRegion}`}><h1>{item.countryRegion}</h1> </Link>
-                       <p>Confirmed: {item.confirmed}</p> 
-                       <p>Deaths: {item.deaths}</p> 
-                       <p>Recovered: {item.recovered}</p> 
-                       </div>);
-                   })}
-                </div>
-            );
-        } else{ 
-            return (<h1>Loading...</h1>)
-        }
+    state = {
+        text: '',
+        countries: [],
+        isLoaded: false
     }
+
+    changeHandle = (e) => {
+        this.setState({
+            text: e.target.value
+        })
+
+        if (e.target.value !== '') {
+
+            this.fetchData();
+        }
+        else {
+            this.setState({
+
+                countries: []
+            })
+        }
+
+    }
+
+    fetchData = () => {
+        fetch('https://covid19.mathdro.id/api/countries')
+            .then(res => res.json())
+            .then(data => {
+                data = Object.keys(data.countries)
+
+
+                this.countries = data.filter((el) => el.toLowerCase().includes(this.state.text))
+                this.setState({
+                    countries: this.countries,
+                    isLoaded: true
+                })
+            })
+    }
+
+
+    render() {
+        const searchResult = (!this.state.isLoaded || this.state.countries.length > 0) ? this.state.countries.map((el) => (
+
+            <Link key={el} to={`/countries/${el}`}><h1>{el}</h1> </Link>
+
+
+
+        )) : <p>Country doesn't exist</p>
+        return (
+            <div className="countries">
+                <h2>Seatch country:</h2>
+                <SearchingInput change={this.changeHandle} />
+                {searchResult}
+            </div>
+        )
+    }
+
+
+
 }
 
 export default Countries;
