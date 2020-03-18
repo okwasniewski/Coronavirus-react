@@ -38,6 +38,7 @@ class Ranking extends React.Component {
             .then(data => {
 
                 this.arrToState = [];
+                console.log(this.topArray)
                 this.topArray.forEach(el => {
                     const country = data.filter((e) => el === e.countryRegion);
                     let casesSum = 0, deathsSum = 0, recoveredSum = 0;
@@ -56,6 +57,8 @@ class Ranking extends React.Component {
                     }
                     this.arrToState.push(item)
                 })
+
+                this.arrToState.sort((a, b) => (a[sorted] < b[sorted]) ? 1 : ((b[sorted] < a[sorted]) ? -1 : 0));
                 this.setState({
                     topCountries: this.arrToState,
                     isLoaded: true
@@ -82,7 +85,7 @@ class Ranking extends React.Component {
     render() {
 
         const data = this.state.isLoaded ? this.state.topCountries.map(el => (
-           <Link to={`/countries/${el.countryRegion}`}> <RankingField class={this.state.sortBy} key={el.countryRegion} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} /> </Link>
+            <Link to={`/countries/${el.countryRegion}`} key={el.countryRegion}> <RankingField class={this.state.sortBy} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} /> </Link>
         )) : <BeatLoader
                 size={15}
                 color={"#123abc"}
