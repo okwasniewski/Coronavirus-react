@@ -37,7 +37,7 @@ class Countries extends React.Component {
                 data = Object.keys(data.countries)
 
 
-                this.countries = data.filter((el) => el.toLowerCase().includes(this.state.text))
+                this.countries = data.filter((el) => el.toLowerCase().includes(this.state.text.toLowerCase()))
                 this.setState({
                     countries: this.countries,
                     isLoaded: true
@@ -47,7 +47,7 @@ class Countries extends React.Component {
 
 
     render() {
-        const searchResult = (!this.state.isLoaded || this.state.countries.length > 0) ? this.state.countries.map((el) => (
+        const searchResult = (this.state.isLoaded || this.state.countries.length > 0) ? this.state.countries.map((el) => (
 
             <Link key={el} to={`/countries/${el}`}><h1>{el}</h1> </Link>
 

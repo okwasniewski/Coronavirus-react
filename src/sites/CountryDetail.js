@@ -1,44 +1,85 @@
 import React from 'react';
+import { css } from "@emotion/core";
+import BeatLoader from "react-spinners/BeatLoader";
+import InfoField from '../components/InfoField';
+import { Link } from 'react-router-dom';
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  position:absolute;
+  top:60%;
+  left:50%;
+  transform:translateX(-50%);
+  border-color: red;
+`;
 
 
 class CountryDetail extends React.Component {
-fetchCountry = async(props) => {
-      const fetchCountry = await fetch(`https://covid19.mathdro.id/api/countries/${this.props.match.params.id}`);
-      const country = await fetchCountry.json();
-      const { confirmed, recovered, deaths } = country;
-      this.setState({
-        isLoaded: true,
-        confirmed: confirmed.value,
-        recovered: recovered.value,
-        deaths: deaths.value
-      })
-  }
-state = {
-    isLoaded: false,
-    confirmed: '',
-    recovered:'',
-    deaths: ''
 
-}
+    state = {
+        isLoaded: false,
+        confirmed: '',
+        recovered: '',
+        deaths: '',
+        cantLoad: false
+    }
 
 
-render() {
-    this.fetchCountry();
-        if(this.state.isLoaded){
-            return (
-                <div className={"countryDetail"}>
-                    <img className={"countryDetail__photo"} src={`https://covid19.mathdro.id/api/countries/${this.props.match.params.id}/og`}></img>
-                   <h1 className={"countryDetail__title"}> {this.props.match.params.id} </h1> 
-                   <p className={"countryDetail__confirmed"}>Confirmed: {this.state.confirmed}</p>
-                   <p className={"countryDetail__recovered"}>Recovered: {this.state.recovered}</p>
-                   <p className={"countryDetail__deaths"}>Deaths: {this.state.deaths}</p>
-                </div>
-            );
-        } else{ 
-            return (<h1>Loading...</h1>)
+    fetchCountry = async () => {
+        const fetchCountry = await fetch(`https://covid19.mathdro.id/api/countries/${this.props.match.params.id}`);
+        try {
+
+
+            const country = await fetchCountry.json();
+            const { confirmed, recovered, deaths } = country;
+            this.setState({
+                isLoaded: true,
+                confirmed: confirmed.value,
+                recovered: recovered.value,
+                deaths: deaths.value
+            })
         }
-    }    
+        catch (e) {
+
+            this.setState({
+                cantLoad: true
+            })
+        }
+    }
+
+
+    componentDidMount() {
+        this.fetchCountry();
+    }
+
+
+    render() {
+        const content = (this.state.isLoaded) ? <>
+            <img className={"countryDetail__photo"} src={`https://covid19.mathdro.id/api/countries/${this.props.match.params.id}/og`} alt="photo1" />
+            <h1 className={"countryDetail__title"}> {this.props.match.params.id} </h1>
+
+            <InfoField text="Deaths" number={this.state.deaths} />
+            <InfoField text="Recovered" number={this.state.recovered} />
+            <InfoField text="Confirmed" number={this.state.confirmed} />
+
+
+        </> : <BeatLoader
+                size={15}
+                color={"#123abc"}
+                css={override}
+            />
+
+        return (
+            <div className={"countryDetail"}>
+                {!this.state.cantLoad && content}
+                {this.state.cantLoad && <>
+                    <p>{this.props.match.params.id} does,t have any confirmed cases</p>
+                    <Link to="/countries" >Back to searching </Link>
+                </>}
+            </div>
+        )
+    }
 }
 
 export default CountryDetail;

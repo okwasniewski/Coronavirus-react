@@ -9,7 +9,7 @@ function InfoField(props) {
         <div className='info-field'>
             <h1> {props.text} </h1>
             <h2><CountUp
-                start={props.number - 1000}
+                start={props.number / 1.5}
                 end={props.number}
                 duration={2.5}
                 useEasing={true}

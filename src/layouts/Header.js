@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 function Header(props) {
     return (
         <header className="top">
-            <div className="top__logo"> <NavLink to="/"> Coronawirus </NavLink> </div>
+            <div className="top__logo"> <NavLink to="/"> Coronavirus </NavLink> </div>
             <nav>
                 <ul className="top__items">
                     <li className="top__item"> <NavLink to="/countries"> Search country </NavLink></li>
