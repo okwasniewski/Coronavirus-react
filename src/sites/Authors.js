@@ -15,8 +15,8 @@ function Authors(props) {
             <a href="https://github.com/Ryczko">Github</a>  
             </div>
             <div className="authors__donate">
-                <h1>Donate</h1>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. vel viverra felis, et placerat tellus. Aenean odio orci, dictum ac ullamcorper quis, consequat sit amet tellus. Aenean ac aliquet leo. Cras viverra egestas nibh, ac dictum ante.  </p>
+                <h1>Help us</h1>
+                <p> Give us a star on github <a href={"https://github.com/okwasniewski/Coronavirus-react"}> Github </a> </p>
                 
             </div>
         </div>
