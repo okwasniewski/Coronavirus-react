@@ -17,4 +17,16 @@
         justify-content: center;
         align-items: center;
     }
+    @media(max-width: 991px){
+            &__second{
+                display: none;
+            }
+            &__first {
+                width: 100%;
+                text-align: center;
+            }
+            &__first ul {
+                list-style-type: none;
+            }
+        }
 }
