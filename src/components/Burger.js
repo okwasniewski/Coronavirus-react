@@ -9,25 +9,25 @@ function Burger({ active, current }) {
           X
         </div>
         <li className="burger__item">
-          <NavLink onClick={active} to="/">
+          <NavLink onClick={active} to="/Coronavirus-react/">
             {" "}
             Home{" "}
           </NavLink>
         </li>
         <li className="burger__item">
-          <NavLink onClick={active} to="/countries">
+          <NavLink onClick={active} to="/Coronavirus-react/countries">
             {" "}
             Search country{" "}
           </NavLink>
         </li>
         <li className="burger__item">
-          <NavLink onClick={active} to="/about">
+          <NavLink onClick={active} to="/Coronavirus-react/about">
             {" "}
             About{" "}
           </NavLink>
         </li>
         <li className="burger__item">
-          <NavLink onClick={active} to="/authors">
+          <NavLink onClick={active} to="/Coronavirus-react/authors">
             {" "}
             Authors{" "}
           </NavLink>
