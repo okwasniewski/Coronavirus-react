@@ -85,7 +85,7 @@ class Ranking extends React.Component {
     render() {
 
         const data = this.state.isLoaded ? this.state.topCountries.map(el => (
-            <Link to={`/countries/${el.countryRegion}`} key={el.countryRegion}> <RankingField class={this.state.sortBy} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} /> </Link>
+            <Link to={`/Coronavirus-react/countries/${el.countryRegion}`} key={el.countryRegion}> <RankingField class={this.state.sortBy} name={el.countryRegion} cases={el.confirmed} deaths={el.deaths} recovered={el.recovered} /> </Link>
         )) : <BeatLoader
                 size={15}
                 color={"#123abc"}

@@ -11,7 +11,7 @@ function Footer() {
             <li><NavLink to="/Coronavirus-react/">Home</NavLink></li>
             <li><NavLink to="/Coronavirus-react/countries">Countries</NavLink></li>
             <li><NavLink to="/Coronavirus-react/about">About</NavLink></li>
-            <li><NavLink to="/Coronavirus-react/countries">Authors </NavLink></li>
+            <li><NavLink to="/Coronavirus-react/authors">Authors </NavLink></li>
             </ul>
         </div>
         <div className="bottom__second">

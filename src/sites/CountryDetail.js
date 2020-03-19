@@ -74,8 +74,8 @@ class CountryDetail extends React.Component {
             <div className={"countryDetail"}>
                 {!this.state.cantLoad && content}
                 {this.state.cantLoad && <>
-                    <p>{this.props.match.params.id} does,t have any confirmed cases</p>
-                    <Link to="/countries" >Back to searching </Link>
+                    <p>{this.props.match.params.id} doesn't have any confirmed cases</p>
+                    <Link to="/Coronavirus-react/countries"> Back to searching </Link>
                 </>}
             </div>
         )
