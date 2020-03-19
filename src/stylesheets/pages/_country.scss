@@ -1,17 +1,20 @@
 .countries {
   text-align: center;
   &__search {
-    border: none;
+    border: 1px solid rgb(170, 170, 170);
     width: 80%;
     height: 50px;
-    border-radius: 0;
+    border-radius: 10px;
     padding: 20px;
     outline: 0;
   }
-  &__search:active {
-    border: none;
+  &__resultsList{
+    height: 400px;
+    overflow:auto;
   }
+ 
   &__result {
     font-weight: 400;
+    
   }
 }

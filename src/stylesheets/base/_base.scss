@@ -27,6 +27,7 @@ html {
 a {
   color: $brand-color;
   text-decoration: none;
+  transition: .2s;
 
   @include on-event {
     color: #4267B2;
