@@ -1,4 +1,5 @@
 .about {
+  margin-top: -50px;
   display: flex;
   flex-direction: column;
   flex-basis: 1200px;
@@ -39,9 +40,15 @@
   }
 
   @media (max-width: 991px) {
+    &__top h1 {
+      font-size: 30px;
+    }
     &__main {
       flex-direction: column;
     }
+    &__box {
+      width: 90%;
+    margin: 15px;    }
     &__image img {
       max-width: 100%;
     }

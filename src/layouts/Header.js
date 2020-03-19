@@ -43,9 +43,7 @@ class Header extends React.Component {
               <NavLink to="/Coronavirus-react/authors"> Authors </NavLink>{" "}
             </li>
             <li className="top__burger">
-              <button onClick={() => this.changeHander()}>
-                <FontAwesomeIcon icon={faBars} />
-              </button>
+                <FontAwesomeIcon onClick={() => this.changeHander()} icon={faBars} />
             </li>
           </ul>
         </nav>

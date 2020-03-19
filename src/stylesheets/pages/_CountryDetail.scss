@@ -14,16 +14,16 @@
         display: none;
     }
    
-    // @media(max-width:991px){
-    //     &__title{
-    //         display: block;
-    //     }
-    //     &__photo {
-    //         display: none;
-    //     }
-    //     .info-field{
-    //         display: block;
-    //     }
-    // }
+    @media(max-width:991px){
+        &__title{
+            display: block;
+        }
+        &__photo {
+            display: none;
+        }
+        .info-field{
+            display: block;
+        }
+    }
    
 }
