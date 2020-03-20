@@ -8,10 +8,10 @@ function Footer() {
     <div className="bottom">
         <div className="bottom__first">
         <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/countries">Countries</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/countries">Authors </NavLink></li>
+            <li><NavLink to="/Coronavirus-react/">Home</NavLink></li>
+            <li><NavLink to="/Coronavirus-react/countries">Countries</NavLink></li>
+            <li><NavLink to="/Coronavirus-react/about">About</NavLink></li>
+            <li><NavLink to="/Coronavirus-react/authors">Authors </NavLink></li>
             </ul>
         </div>
         <div className="bottom__second">

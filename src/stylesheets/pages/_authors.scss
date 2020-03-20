@@ -31,7 +31,11 @@
 
   @media (max-width: 991px) {
     &__box {
-      width: 80%;
+      text-align: center;
+      width: 90%;
+    }
+    &__donate a {
+      margin-top: 25px;
     }
   }
 }

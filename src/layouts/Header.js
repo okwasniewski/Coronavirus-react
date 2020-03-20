@@ -28,24 +28,22 @@ class Header extends React.Component {
         />
         <div className="top__logo">
           {" "}
-          <NavLink to="/"> Coronawirus </NavLink>{" "}
+          <NavLink to="/Coronavirus-react/"> Coronawirus </NavLink>{" "}
         </div>
         <nav>
           <ul className="top__items">
             <li className="top__item">
               {" "}
-              <NavLink to="/countries"> Search country </NavLink>
+              <NavLink to="/Coronavirus-react/countries"> Search country </NavLink>
             </li>
             <li className="top__item">
-              <NavLink to="/about"> About </NavLink>{" "}
+              <NavLink to="/Coronavirus-react/about"> About </NavLink>{" "}
             </li>
             <li className="top__item">
-              <NavLink to="/authors"> Authors </NavLink>{" "}
+              <NavLink to="/Coronavirus-react/authors"> Authors </NavLink>{" "}
             </li>
             <li className="top__burger">
-              <button onClick={() => this.changeHander()}>
-                <FontAwesomeIcon icon={faBars} />
-              </button>
+                <FontAwesomeIcon onClick={() => this.changeHander()} icon={faBars} />
             </li>
           </ul>
         </nav>

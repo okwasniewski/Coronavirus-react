@@ -11,7 +11,7 @@ class Countries extends React.Component {
 
   changeHandle = e => {
     this.setState({
-      text: e.target.value
+      text: e.target.value.toLowerCase()
     });
 
     if (e.target.value !== "") {
@@ -44,7 +44,7 @@ class Countries extends React.Component {
     const searchResult =
       !this.state.isLoaded || this.state.countries.length > 0 ? (
         this.state.countries.map(el => (
-          <Link key={el} to={`/countries/${el}`}>
+          <Link key={el} to={`/Coronavirus-react/countries/${el}`}>
             <h3 className={"countries__result"}>{el}</h3>{" "}
           </Link>
         ))

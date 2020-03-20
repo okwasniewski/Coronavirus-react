@@ -49,7 +49,6 @@ class CountryDetail extends React.Component {
     this.fetchCountry();
   }
 
-
   render() {
     const content = this.state.isLoaded ? (
       <>

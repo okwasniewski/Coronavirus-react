@@ -18,11 +18,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <Route path="/" exact component={Main} />
-        <Route path="/countries" exact component={Countries} />
-        <Route path="/about" component={About} />
-        <Route path="/authors" component={Authors} />
-        <Route path="/countries/:id" component={CountryDetail}/>
+        <Route path="/Coronavirus-react/" exact component={Main} />
+        <Route path="/Coronavirus-react/countries" exact component={Countries} />
+        <Route path="/Coronavirus-react/about" component={About} />
+        <Route path="/Coronavirus-react/authors" component={Authors} />
+        <Route path="/Coronavirus-react/countries/:id" component={CountryDetail}/>
         <Footer/>
       </BrowserRouter>
     </div>
