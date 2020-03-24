@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Coronavirus-react/static/css/main.e2027679.chunk.css",
+    "main.js": "/Coronavirus-react/static/js/main.20befb4f.chunk.js",
+    "main.js.map": "/Coronavirus-react/static/js/main.20befb4f.chunk.js.map",
+    "runtime-main.js": "/Coronavirus-react/static/js/runtime-main.e5674265.js",
+    "runtime-main.js.map": "/Coronavirus-react/static/js/runtime-main.e5674265.js.map",
+    "static/js/2.330a4adc.chunk.js": "/Coronavirus-react/static/js/2.330a4adc.chunk.js",
+    "static/js/2.330a4adc.chunk.js.map": "/Coronavirus-react/static/js/2.330a4adc.chunk.js.map",
+    "index.html": "/Coronavirus-react/index.html",
+    "precache-manifest.ae8bc18f559825dbeede009afcae964c.js": "/Coronavirus-react/precache-manifest.ae8bc18f559825dbeede009afcae964c.js",
+    "service-worker.js": "/Coronavirus-react/service-worker.js",
+    "static/css/main.e2027679.chunk.css.map": "/Coronavirus-react/static/css/main.e2027679.chunk.css.map",
+    "static/js/2.330a4adc.chunk.js.LICENSE.txt": "/Coronavirus-react/static/js/2.330a4adc.chunk.js.LICENSE.txt",
+    "static/media/fontello.css": "/Coronavirus-react/static/media/fontello.f98de043.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5674265.js",
+    "static/js/2.330a4adc.chunk.js",
+    "static/css/main.e2027679.chunk.css",
+    "static/js/main.20befb4f.chunk.js"
+  ]
+}
