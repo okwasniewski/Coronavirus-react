@@ -45,7 +45,7 @@ class Countries extends React.Component {
     const searchResult =
       !this.state.isLoaded || this.state.countries.length > 0 ? (
         this.state.countries.map(el => (
-          <Link key={el.name} to={`/Coronavirus-react/countries/${el.name}`}>
+          <Link key={el.name} to={`/countries/${el.name}`}>
             <h3 className={"countries__result"}>{el.name}</h3>{" "}
           </Link>
         ))

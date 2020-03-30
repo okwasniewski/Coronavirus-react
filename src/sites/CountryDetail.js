@@ -90,7 +90,7 @@ class CountryDetail extends React.Component {
         {this.state.cantLoad && (
           <>
             <p>{this.props.match.params.id} doesn't have any confirmed cases</p>
-            <Link to="/Coronavirus-react/countries"> Back to searching </Link>
+            <Link to="/countries"> Back to searching </Link>
           </>
         )}
       </div>

@@ -36,7 +36,8 @@ function About(props) {
         <img
           src={
             "https://ichef.bbci.co.uk/news/208/cpsprodpb/931B/production/_111195673_corona_whatyouneedtodo_without_title-nc.png"
-          } alt="photo1"
+          }
+          alt="photo1"
         ></img>
       </div>
     </div>
